@@ -1,0 +1,1 @@
+  //  ProsObj_set_lock  // Written by: Kirk as Designer, Created: 07/02/17, 08:29:24  // ------------------  // Method: ProsObj_set_lock () -> bool  // Purpose: set a local semaphore to lock the prosObject  //  see:  ProsObj_CLEAR_LOCKC_BOOLEAN($0)$0:=Not(Semaphore("$prosObject_lock";30))

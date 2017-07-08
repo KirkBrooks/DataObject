@@ -1,0 +1,1 @@
+  //  ProsObj_CLEAR_LOCK  // Written by: Kirk as Designer, Created: 07/02/17, 08:31:35  // ------------------  // Method: ProsObj_CLEAR_LOCK ()  // Purpose: clear the local semaphore for the prosObject  //  see:  ProsObj_set_lockCLEAR SEMAPHORE("$prosObject_lock")
