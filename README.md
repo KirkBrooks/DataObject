@@ -38,12 +38,45 @@ dataObj_get_dataElement is the real workhorse here. It's called as follows:
  
  Optionally you can specify a specific object with $3. 
  ### the return object
- dataObj_get_dataElement returns an object - not a specific value. You can read from or write to that object. Following the example from above the 'name' object is
+ dataObj_get_dataElement returns an object - not a specific value. You can read from or write to that object. For example, if I want to update the data object I could do this:
  
-    `name = {last:"Brooks",first:"Kirk"}`
+ `$obj:=dataObj_get_dataElement ("order.agents[2].partner.addresses[5].adrsText")
+ 
+   OB SET($obj;"singleLine";"123 main street") `
+ 
+ The default data object looks like this:
+ 
+` {  
+	"order": {  
+		"agents": [  
+			null,  
+			{  
+				"partner": {  
+					"addresses": [  
+						null,  
+						null,  
+						null,  
+						null,  
+						{  
+							"adrsText": {  
+								"singleLine": "123 main street"  
+							}  
+						}  
+					]  
+				}  
+			}  
+		]  
+	}  
+} `  
+ 
+ 
+ 
  
  I can get the first name like so:
  
  `$obj:=dataObj_get_dataElement ("order.agents[2].name")
+ 
  $0:=OB get($obj;"last")`
+ 
+
  
