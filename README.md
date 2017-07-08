@@ -48,9 +48,7 @@ dataObj_get_dataElement is the real workhorse here. It's called as follows:
  
  The default data object looks like this:  
  
- {  
-
-    "order": {
+ { "order": {
 
         "agents": [
 
@@ -91,17 +89,14 @@ dataObj_get_dataElement is the real workhorse here. It's called as follows:
     }  
 
 }    
-
-   
  
+ I read the adrsText like so:
  
+ ```
+   $obj:=dataObj_get_dataElement ("order.agents[2].partner.addresses[5].adrsText")  
  
- 
- I can get the first name like so:
- 
- `$obj:=dataObj_get_dataElement ("order.agents[2].name")
- 
- $0:=OB get($obj;"last")`
+   $0:=OB get($obj;"singleLine")  
+   ```
  
 
  
