@@ -48,7 +48,7 @@ dataObj_get_dataElement is the real workhorse here. It's called as follows:
  
  The default data object looks like this:  
  
- { "order": {
+     { "order": {
 
         "agents": [
 
@@ -88,7 +88,7 @@ dataObj_get_dataElement is the real workhorse here. It's called as follows:
 
     }  
 
-}    
+    }    
  
  I read the adrsText like so:
  
@@ -98,5 +98,4 @@ dataObj_get_dataElement is the real workhorse here. It's called as follows:
    $0:=OB get($obj;"singleLine")  
    ```
  
-
- 
+From here it's pretty easy to create a set of methods for setting and getting complex paths from c-objects.
